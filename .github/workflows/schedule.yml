@@ -1,5 +1,6 @@
 name: Update gist with Toggl stats
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 * * * *" # hourly
   push:
@@ -17,6 +18,7 @@ jobs:
           GIST_ID: ${{ secrets.GIST_ID }}
           TOGGL_API_TOKEN: ${{ secrets.TOGGL_API_TOKEN }}
           TOGGL_WORKSPACE_ID: ${{ secrets.TOGGL_WORKSPACE_ID }}
-          FILTER_BY_TAG: 7985682
-          FILTER_BY_BILLABLE: both
+          #FILTER_BY_TAG: 7985682
+          FILTER_BY_TAG: false
+          FILTER_BY_BILLABLE: no
           FILTER_BY_USER: false
