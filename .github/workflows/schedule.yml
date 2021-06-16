@@ -2,7 +2,8 @@ name: Update gist with Toggl stats
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *" # hourly
+    #- cron: "0 * * * *" # hourly
+    - cron:  '30 5,17 * * *'
   push:
     branches: master # on push
               #FILTER_BY_TAG: 7985682
